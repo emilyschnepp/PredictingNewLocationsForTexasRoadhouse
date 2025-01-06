@@ -5,11 +5,13 @@ This end-to-end machine learning project designed to predict new locations for t
 <h5>Business Use Case:</h5>
 Project can be expanded to new restaurants and other industries for use in predicting locations for new business. <br>
 <h4>Tableau Public:</h4>
-[Interact with the Texas Roadhouse Dashboard on Tableau Public](https://public.tableau.com/views/texasRoadhouseDashboard/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
 [Interact with the Texas Roadhouse Dashboard on Tableau Public](https://public.tableau.com/views/texasRoadhouseDashboard/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 <h4>PowerPoint Presentation:</h4> 
-[Project Presentation](presentation/texasRoadhouse.pptx)
+
+[Project Presentation](https://github.com/emilyschnepp/PredictingNewLocationsForTexasRoadhouse/blob/main/presentation/texasRoadhouse.pptx)
+
 
 
 <h6>This project is not affiliated with Texas Roadhouse.</h6>
@@ -41,10 +43,13 @@ Used the following additional resources: <br>
 •	Census Gazetteer: Ensured accurate location mapping with FIPS codes. <br>
 
 Ultimately, three comprehensive datasets were created: <br>
-<br>
-• [trhCensusDf_updated](data/trhCensusDf_updated.csv) includes 598 Texas Roadhouse locations along with the Census data for the communities in which they are located. <br>
-• [updatedLocationResearch.csv](data/updatedLocationResearch.csv) has ~1500 potential sites to explore for new Texas Roadhouse locations across Utah, Colorado, Montana, Idaho and South Carolina. <br>
-• [finalizedTRH.csv](data/finalizedTRH.csv) contains ~2100 rows and joins both updatedLocationResearch.csv and trhCensusDf_updated.csv. <br>
+
+[trhCensusDf_updated](https://github.com/emilyschnepp/PredictingNewLocationsForTexasRoadhouse/blob/main/data/trhCensusDf_updated.csv) includes 598 Texas Roadhouse locations along with the Census data for the communities in which they are located. 
+
+[updatedLocationResearch.csv](data/updatedLocationResearch.csv) has ~1500 potential sites to explore for new Texas Roadhouse locations across Utah, Colorado, Montana, Idaho and South Carolina.
+
+[finalizedTRH.csv](https://github.com/emilyschnepp/PredictingNewLocationsForTexasRoadhouse/blob/main/data/finalizedTRH.csv) contains ~2100 rows and joins both updatedLocationResearch.csv and trhCensusDf_updated.csv. 
+
 <br>
 In total, the datasets contained over 50 variables from the Google Places and US Census APIs. <br>
 
@@ -54,8 +59,11 @@ Note: Geolocation data was sourced from SimpleMaps’ free US Zip Code database.
 1.	Download files: download the .ipynb and associated .csv datasets. <br>
 2.	Upload: Upload to Google Colab or your local Jupyter Notebook environment. <br>
 3.	Run the Scripts: <br>
-• For exploratory data analysis (EDA) use [this EDA script](scripts/trhEDA.ipynb) and datasets trhCensusDf_updated.csv. <br>
-• For location prediction use [this location prediction script](scripts/trhNewLocationPredictor.ipynb) and datasets trhCensusDf_updated.csv and updatedLocationResearch.csv. <br>
+<br>
+
+For exploratory data analysis use [this EDA script](https://github.com/emilyschnepp/PredictingNewLocationsForTexasRoadhouse/blob/main/scripts/trhEDA.ipynb) and datasets trhCensusDf_updated.csv.
+
+For location prediction use: [this location prediction script](https://github.com/emilyschnepp/PredictingNewLocationsForTexasRoadhouse/blob/main/scripts/trhNewLocationPredictor.ipynb) and datasets trhCensusDf_updated.csv and updatedLocationResearch.csv.
 
 <h2>Models</h2> 
 • Baseline Model: Logistic Regression <br>
@@ -71,10 +79,10 @@ Note: Geolocation data was sourced from SimpleMaps’ free US Zip Code database.
 •	populationPenalty and distancePenalty: Initially predictions were in low population areas and very close to other Texas Roadhouse locations. These features were engineered to find restaurants further out, in cities with bigger populations. <br>
 
 <h4>Top Features for Prediction:</h4>
-SHAP Feature Importance – Illustrates how features contribute to the model’s predictions. <br>
-![SHAP Feature Importance](visualizations/shapFeatureImportance.png) <br>
-SHAP Force Plot – Illustrates how the features individually influence the model’s probability of success. <br>
-![SHAP Force Plot](visualizations/shapForcePlot.png) <br>
+
+[SHAP Feature Importance](visualizations/shapFeatureImportance.png) - Illustrates how features contribute to the model's predictions. <br>
+
+[SHAP Force Plot](visualizations/shapForcePlot.png) - Illustrates how the features individually influence the model's probability of success. <br>
 
 <h2>Data Preprocessing</h2> 
 <h4>The following preprocessing steps were taken:</h4>

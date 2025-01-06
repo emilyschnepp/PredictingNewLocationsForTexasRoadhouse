@@ -125,9 +125,10 @@ For location prediction use: [this location prediction script](https://github.co
 
 <h2>Findings</h2> 
 <h4>Top Recommended Locations:</h4>
-• Great Falls, MT (0.9603 success probability) 
-• Salt Lake City, UT (0.9839 success probability)
-Other recommended locations included Billings, MT, Coeur d’Alene, ID, and Meridian, ID. These locations already have Texas Roadhouse restaurants but were recommended despite the implemented distance penalty. This may indicate potential for an additional location in a neighboring area. 
+• Great Falls, MT (0.9603 success probability) <br>
+• Salt Lake City, UT (0.9839 success probability) <br>
+<br>
+Other recommended locations included Billings, MT, Coeur d’Alene, ID, and Meridian, ID. These locations already have Texas Roadhouse restaurants but were recommended despite the implemented distance penalty. This may indicate potential for an additional location in a neighboring area. <br>
 <h4>Additional Insights</h4>
 • The data suggests a positive correlation between restaurant ratings and income up to 60K. At 60K that peaks, and then there seems to be a negative correlation as income increases. Restaurants with the highest ratings are in areas with a median age in the early to mid-30s. <br>
 • The SHAP Force Plot illustrates how features impact success probability. Median home value was found to increase the success probability. Income rent ratio, and stateFIPS were found to contribute negatively to the success probability. <br>

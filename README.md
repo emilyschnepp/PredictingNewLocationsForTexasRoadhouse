@@ -1,20 +1,29 @@
 # Predicting New Locations For Texas Roadhouse Using Gradient Boosting and SHAP.
 
 <h2>Introduction</h2>
-This end-to-end machine learning project designed to predict new locations for the restaurant chain, with a focus on states currently growing in population, such as Colorado, Montana, Idaho, Utah, and South Carolina. <br>
+This end-to-end machine learning project is designed to predict new locations for the restaurant chain, with a focus on states currently growing in population, such as Colorado, Montana, Idaho, Utah, and South Carolina. <br>
 <h5>Business Use Case:</h5>
-Project can be expanded to new restaurants and other industries for use in predicting locations for new business. <br>
-<h4>Tableau Public:</h4>
+This project is designed to inform decision-making for new Texas Roadhouse locations in states with high population growth. This approach can be used for other restaurants, and in other industries, such as retail or healthcare, to figure out where to place new locations for optimized success.  <br>
+<h6>This project is not affiliated with Texas Roadhouse.</h6>
+
+<h2>Key Results</h2>
+This project delivered strong model performance and actionable recommendations for expansion:
+<h4>Model Performance:</h4>
+• Gradient Boosting Model: Accuracy = 82.9%, F1 Score = 82.58%, AUC-ROC = 88.56% <br>
+• Average cross-validation F1 Score = 83.07% across all folds.<br>
+<h4>Top Recommended Locations:</h4>
+• Great Falls, MT - 96.03% success probability <br>
+• Salt Lake City, UT - 98.39% success probability<br>
+
+<h4>Tableau:</h4>
+
+![Top Location Recommendations](https://github.com/emilyschnepp/PredictingNewLocationsForTexasRoadhouse/blob/main/visualizations/trhLocationRecs.png) <br>
 
 [Interact with the Texas Roadhouse Dashboard on Tableau Public](https://public.tableau.com/views/texasRoadhouseDashboard/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 <h4>PowerPoint Presentation:</h4> 
 
 [Project Presentation](https://github.com/emilyschnepp/PredictingNewLocationsForTexasRoadhouse/blob/main/presentation/texasRoadhouse.pptx)
-
-
-
-<h6>This project is not affiliated with Texas Roadhouse.</h6>
 
 <h2>Prerequisites</h2>
 <h4>Tableau Public</h4>
@@ -80,9 +89,9 @@ For location prediction use: [this location prediction script](https://github.co
 
 <h4>Top Features for Prediction:</h4>
 
-[SHAP Feature Importance](visualizations/shapFeatureImportance.png) - Illustrates how features contribute to the model's predictions. <br>
+![SHAP Feature Importance](visualizations/shapFeatureImportance.png) - Illustrates how features contribute to the model's predictions. <br>
 
-[SHAP Force Plot](visualizations/shapForcePlot.png) - Illustrates how the features individually influence the model's probability of success. <br>
+![SHAP Force Plot](visualizations/shapForcePlot.png) - Illustrates how the features individually influence the model's probability of success. <br>
 
 <h2>Data Preprocessing</h2> 
 <h4>The following preprocessing steps were taken:</h4>
@@ -106,11 +115,13 @@ For location prediction use: [this location prediction script](https://github.co
 
 <h2>Visualizations</h2> 
 <h4>Tableau - Interactive Dashboard:</h4> 
+
+![Tableau Dashboard](https://github.com/emilyschnepp/PredictingNewLocationsForTexasRoadhouse/blob/main/visualizations/trhTableauDashboard.png)
 •	Line graph showing a distribution of restaurant ratings, with an annotation at the peak, with 230 restaurants maintaining a rating of 4.4. <br>
 •	Geographic maps depicting success probabilities and restaurant ratings. <br>
 •	Scatterplot showing restaurant success vs median household income and age. <br>
 •	Bar chart of top recommendations for restaurant locations. <br>
-•	Filters applied to the dashboard allow the user to specify desired success probabilities and ratings. <br>
+•	Filters applied to the dashboard allow the user to specify desired success probabilities, ratings or population targets. <br>
 •	The color scheme makes use of green for existing restaurants and brown or red for potential locations. <br>
 
 <h4>EDA Visuals with Python:</h4> 
@@ -135,15 +146,13 @@ Other recommended locations included Billings, MT, Coeur d’Alene, ID, and Meri
 • The SHAP visualization breaks down how each feature impacts the success probability for a specific prediction. Features pushing the prediction higher are shown in blue, while those lowering it are in red. <br>
 
 <h2>Future Work</h2> 
-•	Incorporate missing Texas Roadhouse locations for comprehensive analysis. <br>
-•	Add population growth trends and financial data for robust predictions. <br>
-•	Refine models to better handle edge cases (e.g., low-population areas). <br>
-•	Engineer new features like pop growth rates or competitor features. <br>
-•	Consider expanding to additional states. <br>
-•	Recalibrate penalties for proximity to existing locations. <br>
+•	Expand Geographic Scope: Broaden the analysis to include additional states or regions, creating a strategy applicable nationwide. <br>
+•	Refine Feature Selection: Remove latitude, longitude, and zip code features without compromising model quality, to gain more clarity on the features impacting location selection. <br>
+•	Enhance Location Predictions: Engineer additional features like distance from freeway to improve the model's ability to predict optimal locations. <br>
+•	Optimize Proximity Penalties: Further tune the model's proximity penalties to reduce overlapping market recommendations.
 
 <h2>Limitations</h2>
 This project is proof-of-concept, but it is not without its limitations. <br>
-•	The new restaurant location selection process most probably involves variables from internal sales data that one could not reasonably expect to be available for this project. <br>
-•	While a distance penalty was implemented and fine-tuned, getting recommendations in cities where there are already restaurants indicates room for further refinement. <br>
-•	Some existing Texas Roadhouse locations were dropped from the analysis because the census data could not be acquired or was faulty. Furthermore, multiple sources reported varying numbers of locations. <br>
+•	This project uses publicly available data, excluding important internal sales metrics, which could improve accuracy. <br>
+•	Inconsistencies in census data and fine-tuned distance penalties may impact the recommendations. <br>
+•	A small number of existing Texas Roadhouse locations were excluded from this analysis due to incomplete or faulty data. <br>
